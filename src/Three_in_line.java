@@ -5,8 +5,6 @@ import java.util.Scanner;
  */
 public class Three_in_line {
 
-    char[] board = new char[9];
-
     static String pos11 = "_";
     static String pos12 = "_";
     static String pos13 = "_";
@@ -20,6 +18,8 @@ public class Three_in_line {
     static int la = 0;
     static int lo = 0;
 
+    static Scanner sc = new Scanner(System.in);
+
     public static void main (String [] args) {
 
 
@@ -28,32 +28,40 @@ public class Three_in_line {
 
         printGame();
 
-        Scanner sc = new Scanner(System.in);
+
 
         while (running()) {
-            System.out.println("Player (x) turn: ");
-            System.out.print("lat:  ");
-            la = sc.nextInt();
-            System.out.print("long: ");
-            lo = sc.nextInt();
-            gameX();
+            playerX();
 
-            printGame();
-
-            System.out.println("Player (o) turn: ");
-            System.out.print("lat:  ");
-            la = sc.nextInt();
-            System.out.print("long: ");
-            lo = sc.nextInt();
-            gameO();
-
-            printGame();
+            playerO();
         }
 
     }
 
     public static boolean running() {
         return true;
+    }
+
+    public static void playerX() {
+        System.out.println("Player (x) turn: ");
+        System.out.print("lat:  ");
+        la = sc.nextInt();
+        System.out.print("long: ");
+        lo = sc.nextInt();
+        gameX();
+
+        printGame();
+    }
+
+    public static void playerO() {
+        System.out.println("Player (o) turn: ");
+        System.out.print("lat:  ");
+        la = sc.nextInt();
+        System.out.print("long: ");
+        lo = sc.nextInt();
+        gameO();
+
+        printGame();
     }
 
     public static void printGame() {
@@ -94,6 +102,12 @@ public class Three_in_line {
         }
         else {
             System.out.println("False value!");
+            System.out.println("Player (x) turn: ");
+            System.out.print("lat:  ");
+            la = sc.nextInt();
+            System.out.print("long: ");
+            lo = sc.nextInt();
+            gameX();
         }
     }
 
@@ -127,8 +141,12 @@ public class Three_in_line {
         }
         else {
             System.out.println("False value!");
-
-
+            System.out.println("Player (o) turn: ");
+            System.out.print("lat:  ");
+            la = sc.nextInt();
+            System.out.print("long: ");
+            lo = sc.nextInt();
+            gameO();
         }
     }
 }

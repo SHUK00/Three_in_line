@@ -40,7 +40,24 @@ public class Three_in_line {
     }
 
     public static boolean running() {
-        return true;
+        if (pos11 == "x" && pos12 == "x" && pos13 == "x" || pos21 == "x" && pos22 == "x" && pos23 == "x" || pos31 == "x" && pos32 == "x" && pos33 == "x" || pos11 == "x" && pos21 == "x" && pos31 == "x" || pos12 == "x" && pos22 == "x" && pos32 == "x" || pos13 == "x" && pos23 == "x" && pos33 == "x" || pos11 == "x" && pos22 == "x" && pos33 == "x" || pos31 == "x" && pos22 == "x" && pos13 == "x") {
+            System.out.println(" ");
+            System.out.println("Player (x) won!");
+            return false;
+        }
+        else if (pos11 == "o" && pos12 == "o" && pos13 == "o" || pos21 == "o" && pos22 == "o" && pos23 == "o" || pos31 == "o" && pos32 == "o" && pos33 == "o" || pos11 == "o" && pos21 == "o" && pos31 == "o" || pos12 == "o" && pos22 == "o" && pos32 == "o" || pos13 == "o" && pos23 == "o" && pos33 == "o" || pos11 == "o" && pos22 == "o" && pos33 == "o" || pos31 == "o" && pos22 == "o" && pos13 == "o") {
+            System.out.println(" ");
+            System.out.println("Player (o) won!");
+            return false;
+        }
+        else if (pos11 != "_" && pos12 != "_" && pos13 != "_" && pos21 != "_" && pos22 != "_" && pos23 != "_" && pos31 != "_" && pos32 != "_" && pos33 != "_") {
+            System.out.println(" ");
+            System.out.println("Game Over!");
+            return false;
+        }
+        else {
+            return true;
+        }
     }
 
     public static void turnPlayerX() {
@@ -98,7 +115,9 @@ public class Three_in_line {
             pos33 = "x";
         }
         else {
+            System.out.println(" ");
             System.out.println("False value!");
+            System.out.println(" ");
             turnPlayerX();
         }
     }
@@ -132,7 +151,9 @@ public class Three_in_line {
             pos33 = "o";
         }
         else {
+            System.out.println(" ");
             System.out.println("False value!");
+            System.out.println(" ");
             turnPlayerO();
         }
     }

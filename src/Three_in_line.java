@@ -4,6 +4,6 @@
 public class Three_in_line {
 
     public static void main (String [] args) {
-        
+        System.out.println();
     }
 }

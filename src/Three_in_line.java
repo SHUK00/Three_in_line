@@ -28,12 +28,13 @@ public class Three_in_line {
 
         printGame();
 
-
-
         while (running()) {
-            playerX();
-
-            playerO();
+            System.out.println(" ");
+            turnPlayerX();
+            printGame();
+            System.out.println(" ");
+            turnPlayerO();
+            printGame();
         }
 
     }
@@ -42,26 +43,22 @@ public class Three_in_line {
         return true;
     }
 
-    public static void playerX() {
+    public static void turnPlayerX() {
         System.out.println("Player (x) turn: ");
         System.out.print("lat:  ");
         la = sc.nextInt();
         System.out.print("long: ");
         lo = sc.nextInt();
         gameX();
-
-        printGame();
     }
 
-    public static void playerO() {
+    public static void turnPlayerO() {
         System.out.println("Player (o) turn: ");
         System.out.print("lat:  ");
         la = sc.nextInt();
         System.out.print("long: ");
         lo = sc.nextInt();
         gameO();
-
-        printGame();
     }
 
     public static void printGame() {
@@ -76,38 +73,33 @@ public class Three_in_line {
         if (la == 1 && lo == 1 && pos11 == "_") {
             pos11 = "x";
         }
-        if (la == 1 && lo == 2 && pos12 == "_") {
+        else if (la == 1 && lo == 2 && pos12 == "_") {
             pos12 = "x";
         }
-        if (la == 1 && lo == 3 && pos13 == "_") {
+        else if (la == 1 && lo == 3 && pos13 == "_") {
             pos13 = "x";
         }
-        if (la == 2 && lo == 1 && pos21 == "_") {
+        else if (la == 2 && lo == 1 && pos21 == "_") {
             pos21 = "x";
         }
-        if (la == 2 && lo == 2 && pos22 == "_") {
+        else if (la == 2 && lo == 2 && pos22 == "_") {
             pos22 = "x";
         }
-        if (la == 2 && lo == 3 && pos23 == "_") {
+        else if (la == 2 && lo == 3 && pos23 == "_") {
             pos23 = "x";
         }
-        if (la == 3 && lo == 1 && pos31 == "_") {
+        else if (la == 3 && lo == 1 && pos31 == "_") {
             pos31 = "x";
         }
-        if (la == 3 && lo == 2 && pos32 == "_") {
+        else if (la == 3 && lo == 2 && pos32 == "_") {
             pos32 = "x";
         }
-        if (la == 3 && lo == 3 && pos33 == "_") {
+        else if (la == 3 && lo == 3 && pos33 == "_") {
             pos33 = "x";
         }
         else {
             System.out.println("False value!");
-            System.out.println("Player (x) turn: ");
-            System.out.print("lat:  ");
-            la = sc.nextInt();
-            System.out.print("long: ");
-            lo = sc.nextInt();
-            gameX();
+            turnPlayerX();
         }
     }
 
@@ -115,38 +107,33 @@ public class Three_in_line {
         if (la == 1 && lo == 1 && pos11 == "_") {
             pos11 = "o";
         }
-        if (la == 1 && lo == 2 && pos12 == "_") {
+        else if (la == 1 && lo == 2 && pos12 == "_") {
             pos12 = "o";
         }
-        if (la == 1 && lo == 3 && pos13 == "_") {
+        else if (la == 1 && lo == 3 && pos13 == "_") {
             pos13 = "o";
         }
-        if (la == 2 && lo == 1 && pos21 == "_") {
+        else if (la == 2 && lo == 1 && pos21 == "_") {
             pos21 = "o";
         }
-        if (la == 2 && lo == 2 && pos22 == "_") {
+        else if (la == 2 && lo == 2 && pos22 == "_") {
             pos22 = "o";
         }
-        if (la == 2 && lo == 3 && pos23 == "_") {
+        else if (la == 2 && lo == 3 && pos23 == "_") {
             pos23 = "o";
         }
-        if (la == 3 && lo == 1 && pos31 == "_") {
+        else if (la == 3 && lo == 1 && pos31 == "_") {
             pos31 = "o";
         }
-        if (la == 3 && lo == 2 && pos32 == "_") {
+        else if (la == 3 && lo == 2 && pos32 == "_") {
             pos32 = "o";
         }
-        if (la == 3 && lo == 3 && pos33 == "_") {
+        else if (la == 3 && lo == 3 && pos33 == "_") {
             pos33 = "o";
         }
         else {
             System.out.println("False value!");
-            System.out.println("Player (o) turn: ");
-            System.out.print("lat:  ");
-            la = sc.nextInt();
-            System.out.print("long: ");
-            lo = sc.nextInt();
-            gameO();
+            turnPlayerO();
         }
     }
 }

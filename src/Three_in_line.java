@@ -67,6 +67,11 @@ public class Three_in_line {
         System.out.print("long: ");
         lo = sc.nextInt();
         gameX();
+        if (pos11 != "_" && pos12 != "_" && pos13 != "_" && pos21 != "_" && pos22 != "_" && pos23 != "_" && pos31 != "_" && pos32 != "_" && pos33 != "_") {
+            System.out.println(" ");
+            System.out.println("Game Over!");
+            System.exit(0);
+        }
     }
 
     public static void turnPlayerO() {
